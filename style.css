@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  text-align: center;
+}
+/* menu styles */
+.logo {
+  color: greenyellow;
+  text-transform: uppercase;
+}
+nav.main-nav {
+  background-color: black;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  position: relative;
+}
+.menu li a {
+  color: greenyellow;
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
+.menu li a:hover {
+  color: blue;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color:#000000;
+  width: 100%;
+  left: 0;
+}
+.sub-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+.menu li:hover .sub-menu {
+  display: block;
+}
+.toggle {
+  color: greenyellow;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.toggle:hover {
+  color: blue;
+}
+#mobile {
+  display: none;
+}
+.mobile-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.mobile-menu ul {
+  background-color: black;
+}
+.mobile-menu ul li a {
+  color: greenyellow;
+  display: inline-block;
+  padding: .6rem 2rem;
+  text-transform: uppercase;
+}
+.mobile-menu ul a:hover {
+  color: blue;
+}
+.mobile-sub-menu {
+  display: none;
+}
+.mobile-menu ul li:hover .mobile-sub-menu {
+  display: block;
+}
+@media only screen and (max-width: 650px) {
+
+}
