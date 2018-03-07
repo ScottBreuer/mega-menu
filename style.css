@@ -86,6 +86,7 @@ nav.main-nav {
 .mobile-menu ul li:hover .mobile-sub-menu {
   display: block;
 }
+
 @media only screen and (max-width: 650px) {
 
 }
