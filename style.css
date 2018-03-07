@@ -47,11 +47,9 @@ nav.main-nav {
   left: 0;
 }
 .sub-menu ul {
-  display: flex;
-  flex-direction: column;
 }
 .menu li:hover .sub-menu {
-  display: block;
+  display: flex;
 }
 .toggle {
   color: greenyellow;
@@ -87,6 +85,6 @@ nav.main-nav {
   display: block;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
 
 }
