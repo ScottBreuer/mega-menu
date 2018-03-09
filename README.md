@@ -1,3 +1,3 @@
-# mega-menu
+# CSS only mega menu
 
-This is a work in progress. Just testing github at this stage
+This is a work in progress. CSS only mega menu
