@@ -17,8 +17,10 @@ h1 {
   text-transform: uppercase;
 }
 nav.main-nav {
+  position: relative;
   background-color: black;
   width: 100%;
+  z-index: 1000;
   padding-left: 2rem;
   padding-right: 2rem;
   display: flex;
@@ -28,30 +30,52 @@ nav.main-nav {
 }
 .menu {
   display: flex;
+  background-color: black;
   position: relative;
+  z-index: 1000;
 }
 .menu li a {
+  background-color: black;
   color: greenyellow;
   display: inline-block;
   padding: 1rem 2rem;
   text-transform: uppercase;
+  /* -webkit-transition:0.5s;
+  transition:0.5s; */
 }
 .menu li a:hover {
   color: blue;
 }
 .sub-menu {
-  display: none;
+  visibility: hidden;
   position: absolute;
   background-color:#000000;
   width: 100%;
+  z-index: -1;
   left: 0;
+  transform: translateY(-100%);
+  transition: all 0.8s ease-in-out 0s, visibility 0s linear 0.8s;
 }
-.sub-menu ul {
+.sub-menu img {
+  width: 70px;
+  margin-right: 1rem;
 }
-.menu li:hover .sub-menu {
+.sub-menu ul li a {
   display: flex;
 }
+.sub-menu li a p {
+  text-transform: none;
+}
+.sub-menu li a h4 {
+  color: lightgray;
+}
+.menu li:hover .sub-menu {
+  visibility: visible;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+}
 .toggle {
+  display: none;
   color: greenyellow;
   font-size: 2.5rem;
   cursor: pointer;
@@ -63,11 +87,19 @@ nav.main-nav {
   display: none;
 }
 .mobile-menu {
-  display: flex;
-  justify-content: flex-end;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: all 0.8s ease-in-out 0s, visibility 0s linear 0.8s;
 }
 .mobile-menu ul {
   background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu ul li {
+  text-align: center;
 }
 .mobile-menu ul li a {
   color: greenyellow;
@@ -86,5 +118,15 @@ nav.main-nav {
 }
 
 @media only screen and (max-width: 768px) {
-
+  .menu {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
+  #mobile:checked + .mobile-menu {
+    visibility: visible;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
+  }
 }
